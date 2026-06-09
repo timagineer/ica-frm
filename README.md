@@ -1,8 +1,8 @@
-# Forms Demo — Patient Portal Prototype
+# Forms System Prototype — Patient Portal Context
 
-A prototype mobile-first form system for a psychiatric patient intake flow. Demonstrates all major input patterns needed for clinical forms, built with vanilla HTML, CSS, and JavaScript — no frameworks or dependencies.
+A prototype mobile-first form system for a psychiatric patient intake flow. Demonstrates major input patterns needed for clinical forms, built with vanilla HTML, CSS, and JavaScript — no frameworks or dependencies.
 
-> **Scope note:** This prototype covers the *Social History* section of a larger Standard Intake Form. It is not the full intake — just enough to demo every input pattern in the design system.
+> **Scope note:** This prototype covers part of the *Social History* section of a larger Standard Intake Form. It is not the full intake — just enough to demo every input pattern in the design system.
 
 ---
 
@@ -116,20 +116,9 @@ End of flow. Marks the section complete in `sessionStorage` and returns to the d
 
 ---
 
-## Header & Navigation
-
-All pages share a consistent header with:
-- **Logo** — truncates on small viewports
-- **Desktop nav** (≥560px) — 5 text links (Home, Appointments, Documents, Messages, Profile) centered between logo and user menu. Active page shown with brand color + bottom border underline.
-- **User menu button** — "Tim" + Lucide chevron-down, hidden on mobile
-- **Hamburger button** — animated SVG path transition (menu ↔ X), visible on mobile only
-- **Breadcrumbs** — CSS-generated `»` separator via `a + a::before`, links back to dashboard
-
----
-
 ## Design Tokens
 
-Primitive tokens use a perceptual grayscale scale (`---00` through `---100`) generated with [neuitral.timpish.com](https://neuitral.timpish.com), plus a blue HSL scale (`--blue-1` through `--blue-4d`) and named green/red tokens stored as hex. The blue scale is split into `--brand-text` (text, focus rings, ghost buttons) and `--brand-surface` (primary button background) to satisfy WCAG 1.4.3 in both light and dark modes simultaneously.
+Primitive tokens use a perceptual grayscale scale (`---00` through `---100`) generated with [neuitral.timpish.com](https://neuitral.timpish.com), plus a blue brand scale (`--blue-1` through `--blue-4d`), lime accent and error semantic tokens all stored as hex. The blue scale is split into `--brand-text` (text, focus rings, ghost buttons) and `--brand-surface` (primary button background) to satisfy WCAG 1.4.3 in both light and dark modes simultaneously.
 
 Semantic tokens alias primitives via `light-dark()` exclusively at the semantic layer — never in primitives. This means all dark mode support is handled in one place with no separate dark mode overrides or duplicate rules anywhere in the codebase.
 
@@ -138,6 +127,6 @@ Spacing uses a stepped scale (`--space-00` through `--space-95`) with fluid `cla
 ### WCAG Compliance
 - 1.4.3 (text contrast): all body text, labels, nav items, and active states pass AA
 - 1.4.11 (non-text contrast): input borders (`---55` light / `---40` dark), control borders (`---56` light / `---44` dark), progress track all pass 3:1
-- Required asterisks (`*`) use `font-weight: regular` — intentionally lighter than label text
+- Required asterisks (`*`) use `font-weight: regular` — intentionally lighter than bolde label text
 - Hover/active states accepted as exempt per WCAG exception for state changes
 

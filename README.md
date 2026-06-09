@@ -131,7 +131,7 @@ All pages share a consistent header with:
 
 Primitive tokens use a perceptual grayscale scale (`---00` through `---100`) generated with [neuitral.timpish.com](https://neuitral.timpish.com), plus a blue HSL scale (`--blue-1` through `--blue-4d`) and named green/red tokens stored as hex. The blue scale is split into `--brand-text` (text, focus rings, ghost buttons) and `--brand-surface` (primary button background) to satisfy WCAG 1.4.3 in both light and dark modes simultaneously.
 
-Semantic tokens alias primitives via `light-dark()` exclusively at the semantic layer — never in primitives.
+Semantic tokens alias primitives via `light-dark()` exclusively at the semantic layer — never in primitives. This means all dark mode support is handled in one place with no separate dark mode overrides or duplicate rules anywhere in the codebase.
 
 Spacing uses a stepped scale (`--space-00` through `--space-95`) with fluid `clamp()` values for responsive spacing (`--space-30-40`, `--space-40-60`, etc.).
 

@@ -1397,7 +1397,7 @@
 
     .consent-label {
         display: flex;
-        gap: var(--space-25);
+        gap: var(--space-30);
         align-items: flex-start;
         cursor: pointer;
         line-height: var(--leading-10);

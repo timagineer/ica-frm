@@ -127,6 +127,6 @@ Spacing uses a stepped scale (`--space-00` through `--space-95`) with fluid `cla
 ### WCAG Compliance
 - 1.4.3 (text contrast): all body text, labels, nav items, and active states pass AA
 - 1.4.11 (non-text contrast): input borders (`---55` light / `---40` dark), control borders (`---56` light / `---44` dark), progress track all pass 3:1
-- Required asterisks (`*`) use `font-weight: regular` — intentionally lighter than bolde label text
+- Required asterisks (`*`) use `font-weight: regular` — intentionally lighter than bold label text
 - Hover/active states accepted as exempt per WCAG exception for state changes
 

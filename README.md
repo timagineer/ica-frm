@@ -24,7 +24,7 @@ A mobile-first forms system prototype for a psychiatric patient intake flow. Dem
 ### CSS Layers
 
 ```
-@layer config, native, layouts, components, keyframes, utils
+@layer config, native, layouts, components, motion, utils
 ```
 
 - **config** — design tokens (primitives → semantic → reset). Two sub-layers: `tokens-primitive` (color palettes, spacing, typography, etc.) and `tokens-semantic` (named aliases using `light-dark()` for color)

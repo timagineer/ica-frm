@@ -31,7 +31,7 @@ A mobile-first forms system prototype for a psychiatric patient intake flow. Dem
 - **native** — base HTML element styles
 - **layouts** — `cover`, `stack-x`, `stack-y`, `split-x`
 - **components** — all UI components
-- **keyframes** — `fade-in`
+- **motion** — cross-document `@view-transition` and `fade-in` keyframes
 - **utils** — one-off overrides
 
 `light-dark()` is used exclusively at the semantic layer — never on primitives. All dark mode support lives in one place with no duplicate rules.

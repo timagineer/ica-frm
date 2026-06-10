@@ -1,12 +1,7 @@
-@media (prefers-reduced-motion: no-preference) {
-    @view-transition {
-        navigation: auto;
-    }
-}
-
-@layer config, native, layouts, components, keyframes, utils;
+@layer config, native, layouts, components, motion, utils;
 
 @layer config {
+
     @layer tokens-primitive, tokens-semantic, reset;
 
     @layer tokens-primitive {
@@ -494,7 +489,6 @@
 }
 
 @layer components {
-
 
     /* -- box ----------------------------- */
     .box {
@@ -1525,9 +1519,12 @@
     }
 }
 
-@layer keyframes {
+@layer motion {
 
     @media (prefers-reduced-motion: no-preference) {
+        @view-transition {
+            navigation: auto;
+        }
 
         @keyframes fade-in {
             from {
@@ -1553,6 +1550,7 @@
 
 }
 
+/* -- layout debugger ----------------------------- */
 /* * {
     outline: 0.5px dashed deeppink !important;
 } */

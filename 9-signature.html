@@ -130,7 +130,7 @@
             ctx.stroke();
             hasSigned = true;
             signatureData.value = canvas.toDataURL();
-            saveField('signature', 'signed');
+            saveField('signature', canvas.toDataURL());
             signatureError.hidden = true;
             checkFormComplete();
         }
@@ -168,6 +168,13 @@
 
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
+
+        // Restore signature from saved data
+        if (signatureData.value) {
+            const img = new Image();
+            img.onload = () => { ctx.drawImage(img, 0, 0); hasSigned = true; };
+            img.src = signatureData.value;
+        }
     });
     </script>
 

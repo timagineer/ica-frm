@@ -49,7 +49,7 @@
                     <span class="slider-value">5</span>
                 </div>
                 <div class="slider-wrap">
-                    <input id="mood-input" type="range" min="0" max="10" value="5" aria-valuemin="0" aria-valuemax="10" aria-valuenow="5">
+                    <input id="mood-input" name="moodScore" type="range" min="0" max="10" value="5" aria-valuemin="0" aria-valuemax="10" aria-valuenow="5">
                     <div class="slider-labels">
                         <span class="slider-label"><span class="slider-emoji">&#128542;</span> Worst</span>
                         <span class="slider-label">Best <span class="slider-emoji">&#128512;</span></span>
@@ -327,6 +327,11 @@
                 saved.medications.forEach(med => { selected.add(med); addChip(med); });
             }
             if (saved.pharmacy) pharmInput.value = saved.pharmacy;
+            if (saved.moodScore) {
+                moodInput.value = saved.moodScore;
+                moodValue.textContent = saved.moodScore;
+                moodInput.setAttribute('aria-valuenow', saved.moodScore);
+            }
         });
     </script>
 

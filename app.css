@@ -225,6 +225,7 @@
             --form-control-disabled: light-dark(var(---58), var(---40));
             --progress-track: light-dark(var(---84), var(---23));
             --switch-track: light-dark(var(---56), var(---44));
+            --nav-active-bg: light-dark(var(---96), var(---08));
 
             /* Fluid Typography */
             --font-size-small: clamp(var(--font-size-00), 0.7026rem + 0.2371vw, var(--font-size-05));
@@ -1417,31 +1418,36 @@
     }
 
     .header-nav a {
-        /* background-color: var(---01); */
         color: var(--text-muted);
-        /* color: var(---10); */
         text-decoration: none;
         font-weight: var(--medium);
         font-size: var(--font-size-small);
         letter-spacing: var(--tracking-00);
-        padding: var(--space-15) var(--space-25);
+        padding: var(--space-15) var(--space-30);
         border-radius: var(--radius);
     }
 
     .header-nav a:hover {
         color: var(--text-body);
         background-color: var(--surface-hover);
+        box-shadow: inset 0 -1.5px 0 var(--border-color);
     }
 
     .header-nav a.active {
         color: var(--brand-text);
-        border-bottom: var(--space-10) solid var(--brand-text);
-        border-radius: 0;
-        background-color: transparent;
+        background-color: var(--nav-active-bg);
+        position: relative;
+        box-shadow: inset 0 -2px 0 var(--progress-fill);
     }
 
-    .header-nav a.active:hover {
-        background-color: transparent;
+    @media (prefers-color-scheme: dark) {
+        .header-nav a:hover {
+            background-color: var(--surface-active);
+        }
+
+        .header-nav a.active {
+            box-shadow: inset 0 -1px 0 var(--progress-fill);
+        }
     }
 
     .user-menu {
@@ -1546,3 +1552,7 @@
     }
 
 }
+
+/* * {
+    outline: 0.5px dashed deeppink !important;
+} */

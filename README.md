@@ -1,8 +1,8 @@
 # Forms System Prototype — Patient Portal Context
 
-A prototype mobile-first form system for a psychiatric patient intake flow. Demonstrates major input patterns needed for clinical forms, built with vanilla HTML, CSS, and JavaScript — no frameworks or dependencies.
+A mobile-first forms system prototype for a psychiatric patient intake flow. Demonstrates major input patterns needed for clinical forms, built with core web technologies without frameworks or dependencies.
 
-> **Scope note:** This prototype covers part of the *Social History* section of a larger Standard Intake Form. It is not the full intake — just enough to demo every input pattern in the design system.
+> **Scope note:** Covers parts of the *Social History* section of a the 'Standard Intake Form.' It is not the full intake — just enough to demo all input patterns in the system.
 
 ---
 
@@ -16,7 +16,7 @@ Styles are organized using `@layer` for explicit cascade control:
 @layer config, native, layouts, components, keyframes, utils
 ```
 
-- **config** — design tokens (primitives → semantic → reset). Two sub-layers: `tokens-primitive` (raw scale: grayscale `---00`–`---100`, blue HSL scale, green/red) and `tokens-semantic` (named aliases using `light-dark()` for automatic dark mode: `--surface`, `--canvas`, `--brand-text`, `--brand-surface`, `--text-body`, `--text-muted`, etc.)
+- **config** — design tokens (primitives → semantic → reset). Two sub-layers: `tokens-primitive` (color palettes, spacing, typography, etc.) and `tokens-semantic` (named aliases using `light-dark()` for automatic dark mode: `--surface`, `--canvas`, `--brand-text`, `--brand-surface`, `--text-body`, `--text-muted`, etc.)
 - **native** — base HTML element styles (`body`, `header`, `footer`, `h1`, `a`, etc.)
 - **layouts** — structural layout utilities: `cover`, `stack-x`, `stack-y`, `split-x`
 - **components** — all UI components: buttons, inputs, form grids, cards, combobox, chips, slider, switch, radio table, file upload, signature, header nav, breadcrumbs, etc.

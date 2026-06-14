@@ -92,7 +92,6 @@
                     <label for="state">State</label>
                     <select id="state" name="state" aria-required="true" aria-describedby="state-error">
                         <option value="">Select…</option>
-                            <option>Maryland</option>
                             <option>Alabama</option>
                             <option>Alaska</option>
                             <option>Arizona</option>
@@ -171,8 +170,26 @@
         document.addEventListener('DOMContentLoaded', () => {
             const firstName = document.getElementById('first-name');
             const preferredName = document.getElementById('preferred-name');
-            let userEditedPreferred = false;
+            const stateSelect = document.getElementById('state');
 
+            // Seed demo data if sessionStorage is empty
+            if (!getFormData().firstName) {
+                saveField('firstName', 'Pamela');
+                saveField('lastName', 'Patient');
+                saveField('preferredName', 'Pam');
+                saveField('dob', '1985-03-15');
+                saveField('email', 'pam.patient@email.com');
+                saveField('phone', '555-382-9147');
+                saveField('address', '742 Evergreen Terrace');
+                saveField('state', 'Maryland');
+                restoreForm();
+                updateProgress();
+                checkFormComplete();
+            }
+
+            stateSelect.value = 'Maryland';
+
+            let userEditedPreferred = preferredName.value !== firstName.value;
             preferredName.addEventListener('input', () => { userEditedPreferred = true; });
             firstName.addEventListener('input', () => {
                 if (!userEditedPreferred) preferredName.value = firstName.value;

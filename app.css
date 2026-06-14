@@ -14,18 +14,18 @@
             color-scheme: light dark;
 
             /* Color */
-            --blue-1: #234271;
-            --blue-1d: #2a5089;
-            --blue-2: #2a5089;
-            --blue-2d: #3260a4;
-            --blue-3: #3260a4;
-            --blue-3d: #4075c4;
-            --blue-4: #4478c5;
-            --blue-4d: #5b89cd;
-            --green-1: #5ca30a;
-            --green-1d: #438900;
-            --red-1: #db243c;
-            --red-1d: #eb3849;
+            --blue-1: oklch(38.052% 0.0888 258.539);
+            --blue-1d: oklch(43.332% 0.10422 258.384);
+            --blue-2: oklch(43.332% 0.10422 258.384);
+            --blue-2d: oklch(49.153% 0.12057 258.167);
+            --blue-3: oklch(49.153% 0.12057 258.167);
+            --blue-3d: oklch(56.478% 0.13534 258.279);
+            --blue-4: oklch(57.378% 0.13186 258.137);
+            --blue-4d: oklch(62.692% 0.11509 258.021);
+            --green-1: oklch(64.334% 0.18078 133.703);
+            --green-1d: oklch(56.178% 0.1659 135.639);
+            --red-1: oklch(57.66% 0.21353 21.464);
+            --red-1d: oklch(61.965% 0.2142 21.254);
             ---00: #000000;
             ---01: #020203;
             ---02: #040506;
@@ -135,6 +135,13 @@
             --font-size-10: 0.9375rem;
             --font-size-15: 1.166rem;
             --font-size-20: 1.666rem;
+            --leading-00: 1.125;
+            --leading-05: 1.25;
+            --leading-10: 1.5;
+            --leading-15: 1.75;
+            --tracking-00: 0.0125em;
+            --tracking-05: 0.07125em;
+            --tracking-10: 0.130em;
             --thin: 100;
             --extra-light: 200;
             --light: 300;
@@ -144,13 +151,6 @@
             --bold: 700;
             --extra-bold: 800;
             --black: 900;
-            --leading-00: 1.125;
-            --leading-05: 1.25;
-            --leading-10: 1.5;
-            --leading-15: 1.75;
-            --tracking-00: 0.0125em;
-            --tracking-05: 0.07125em;
-            --tracking-10: 0.130em;
 
             /* Space */
             --space-00: 0.0625rem;
@@ -197,9 +197,9 @@
             --surface-active: light-dark(var(---88), var(---14));
 
             /* Color: Text */
-            --text-body: light-dark(var(---20), var(---88));
-            --text-heading: light-dark(var(---24), var(---92));
             --text-logo: light-dark(var(---44), var(---70));
+            --text-heading: light-dark(var(---24), var(---92));
+            --text-body: light-dark(var(---20), var(---88));
             --text-muted: light-dark(var(---40), var(---58));
             --text-ghost: light-dark(var(---51), var(---44));
             --text-on-brand: var(---100);
@@ -291,6 +291,10 @@
             min-height: 100dvh;
         }
 
+        fieldset {
+            border: none;
+        }
+
         :where(h1, h2, h3, h4, h5, h6, p) {
             overflow-wrap: break-word;
         }
@@ -305,10 +309,6 @@
 
         :where(button, input, select, textarea) {
             font: inherit;
-        }
-
-        fieldset {
-            border: none;
         }
 
         :where(button, label[for], select, summary, [role="button"]) {

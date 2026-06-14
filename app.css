@@ -26,6 +26,7 @@
             --green-1d: oklch(56.178% 0.1659 135.639);
             --red-1: oklch(57.66% 0.21353 21.464);
             --red-1d: oklch(61.965% 0.2142 21.254);
+            /* --red-2d: hsl(354, 82%, 27%); */
             ---00: #000000;
             ---01: #020203;
             ---02: #040506;
@@ -174,9 +175,22 @@
             --space-90: 8rem;
             --space-95: 10rem;
 
+            /* Fluid Space */
+            --space-05-15: clamp(var(--space-05), 0.0491rem + 0.2232vw, var(--space-15));
+            --space-15-25: clamp(var(--space-15), 0.1786rem + 0.3571vw, var(--space-25));
+            --space-30-40: clamp(var(--space-30), 0.5179rem + 0.5357vw, var(--space-40));
+            --space-30-60: clamp(var(--space-30), 0.2321rem + 1.9643vw, var(--space-60));
+            --space-35-40: clamp(var(--space-35), 0.6786rem + 0.3571vw, var(--space-40));
+            --space-35-45: clamp(var(--space-35), 0.6429rem + 0.5357vw, var(--space-45));
+            --space-40-45: clamp(var(--space-40), 0.9643rem + 0.1786vw, var(--space-45));
+            --space-40-60: clamp(var(--space-40), 0.7143rem + 1.4286vw, var(--space-60));
+            --space-50-55: clamp(var(--space-50), 1.1786rem + 0.3571vw, var(--space-55));
+            --space-55-65: clamp(var(--space-55), 1.2143rem + 1.4286vw, var(--space-65));
+            --space-60-65: clamp(var(--space-60), 1.8571rem + 0.7143vw, var(--space-65));
+            --grid-gap: clamp(var(--space-55), 1.4286rem + 0.3571vw, calc(var(--space-55)*1.167));
+
             /* Shape */
             --circle: 50%;
-            --stroke-style: solid;
 
             /* Motion */
             --ease-in-out-quad: cubic-bezier(.455, .03, .515, .955);
@@ -193,11 +207,10 @@
             --canvas: light-dark(var(---98), var(---05));
             --surface: light-dark(var(---100), var(---06));
             --surface-hover: light-dark(var(---92), var(---12));
-            --surface-hover-subtle: light-dark(var(---97), var(---08));
+            --surface-tint: light-dark(var(---97), var(---08));
             --surface-active: light-dark(var(---88), var(---14));
 
             /* Color: Text */
-            --text-logo: light-dark(var(---44), var(---70));
             --text-heading: light-dark(var(---24), var(---92));
             --text-body: light-dark(var(---20), var(---88));
             --text-muted: light-dark(var(---40), var(---58));
@@ -211,38 +224,24 @@
             --brand-hover: light-dark(var(--blue-2), var(--blue-2d));
             --brand-active: light-dark(var(--blue-1), var(--blue-1d));
             --error: light-dark(var(--red-1), var(--red-1d));
-            --progress-fill: light-dark(var(--blue-4), var(--blue-4d));
 
             /* Color: Borders */
             --border-color: light-dark(var(---76), var(---20));
-            --border-input-color: light-dark(var(---55), var(---40));
-            --border-control-color: light-dark(var(---56), var(---44));
+            --input-color: light-dark(var(---55), var(---40));
+            --control-color: light-dark(var(---56), var(---44));
 
             /* Color: Controls */
-            --form-control-accent: var(--brand-surface);
-            --form-control-disabled: light-dark(var(---58), var(---40));
+            --control-accent: var(--brand-surface);
+            --control-disabled: light-dark(var(---58), var(---40));
+            --progress-fill: light-dark(var(--blue-4), var(--blue-4d));
             --progress-track: light-dark(var(---84), var(---23));
             --switch-track: light-dark(var(---56), var(---44));
-            --nav-active-bg: light-dark(var(---96), var(---08));
+            --surface-nav-active: light-dark(var(---96), var(---08));
 
             /* Fluid Typography */
             --font-size-small: clamp(var(--font-size-00), 0.7026rem + 0.2371vw, var(--font-size-05));
             --font-size-body: clamp(var(--font-size-10), 0.8722rem + 0.3264vw, var(--font-size-15));
             --font-size-large: clamp(var(--font-size-15), 1.0231rem + 0.7143vw, var(--font-size-20));
-
-            /* Fluid Spacing */
-            --form-grid-gap: clamp(var(--space-55), 1.4286rem + 0.3571vw, calc(var(--space-55)*1.167));
-            --space-05-15: clamp(var(--space-05), 0.0491rem + 0.2232vw, var(--space-15));
-            --space-15-25: clamp(var(--space-15), 0.1786rem + 0.3571vw, var(--space-25));
-            --space-30-40: clamp(var(--space-30), 0.5179rem + 0.5357vw, var(--space-40));
-            --space-30-60: clamp(var(--space-30), 0.2321rem + 1.9643vw, var(--space-60));
-            --space-35-40: clamp(var(--space-35), 0.6786rem + 0.3571vw, var(--space-40));
-            --space-35-45: clamp(var(--space-35), 0.6429rem + 0.5357vw, var(--space-45));
-            --space-40-45: clamp(var(--space-40), 0.9643rem + 0.1786vw, var(--space-45));
-            --space-40-60: clamp(var(--space-40), 0.7143rem + 1.4286vw, var(--space-60));
-            --space-50-55: clamp(var(--space-50), 1.1786rem + 0.3571vw, var(--space-55));
-            --space-55-65: clamp(var(--space-55), 1.2143rem + 1.4286vw, var(--space-65));
-            --space-60-65: clamp(var(--space-60), 1.8571rem + 0.7143vw, var(--space-65));
 
             /* Shapes */
             --radius-sm: var(--space-10);
@@ -250,9 +249,9 @@
 
             /* Borders */
             --border-width: calc(var(--space-10) / 2);
-            --border: var(--border-width) var(--stroke-style) var(--border-color);
-            --border-control: var(--space-10) var(--stroke-style) var(--border-control-color);
-            --border-input: var(--border-width) var(--stroke-style) var(--border-input-color);
+            --border: var(--border-width) solid var(--border-color);
+            --control-border: var(--space-10) solid var(--control-color);
+            --input-border: var(--border-width) solid var(--input-color);
 
             /* Focus */
             --focus-ring-size: max(var(--space-10), 0.08em);
@@ -410,7 +409,7 @@
     }
 
     :is(a, button, input):focus-visible {
-        outline: var(--focus-ring-size) var(--stroke-style) var(--focus-ring-color);
+        outline: var(--focus-ring-size) solid var(--focus-ring-color);
         outline-offset: var(--focus-ring-size);
     }
 
@@ -521,7 +520,7 @@
 
     .header-nav a.active {
         color: var(--brand-text);
-        background-color: var(--nav-active-bg);
+        background-color: var(--surface-nav-active);
         position: relative;
         box-shadow: inset 0 -2px 0 var(--progress-fill);
     }
@@ -613,7 +612,7 @@
 
     /* -- logo ---------------------------- */
     .logo {
-        color: var(--text-logo);
+        color: light-dark(var(---44), var(---70));
         font-weight: var(--semibold);
         letter-spacing: var(--tracking-00);
         max-inline-size: 18rem;
@@ -643,7 +642,7 @@
 
     .breadcrumbs a+a::before,
     .breadcrumbs a+span::before {
-        /* content: "Â»"; */
+        /* content: "Ã‚Â»"; */
         content: "\00BB";
         margin-inline: var(--space-20);
         color: var(--text-muted);
@@ -736,17 +735,17 @@
     @media (min-width: 40rem) {
         .form-grid-2 {
             grid-template-columns: 1fr 1fr;
-            column-gap: var(--form-grid-gap);
+            column-gap: var(--grid-gap);
         }
 
         .form-grid-3 {
             grid-template-columns: 1fr 1fr 1fr;
-            column-gap: var(--form-grid-gap);
+            column-gap: var(--grid-gap);
         }
 
         .form-grid-4 {
             grid-template-columns: 1fr 1fr 1fr 1fr;
-            column-gap: var(--form-grid-gap);
+            column-gap: var(--grid-gap);
         }
     }
 
@@ -762,7 +761,7 @@
     }
 
     .form-card:has(a):hover {
-        background-color: var(--surface-hover-subtle);
+        background-color: var(--surface-tint);
     }
 
     .form-card:has(a):hover .btn {
@@ -804,6 +803,7 @@
     @media (min-width: 48rem) {
         .form-card-grid {
             grid-template-columns: repeat(3, 1fr);
+            gap: var(--grid-gap);
         }
 
         .form-card-body {
@@ -843,7 +843,7 @@
         inline-size: 100%;
         padding-block: var(--space-35);
         padding-inline: var(--space-45);
-        border: var(--border-input);
+        border: var(--input-border);
         border-radius: var(--radius);
         background-color: var(--surface);
         color: var(--text-body);
@@ -984,7 +984,7 @@
         color: currentColor;
         inline-size: 1.15em;
         block-size: 1.15em;
-        border: var(--border-control);
+        border: var(--control-border);
         border-radius: var(--radius-sm);
         display: grid;
         place-content: center;
@@ -997,7 +997,7 @@
         clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
         transform: scale(0);
         transform-origin: center center;
-        box-shadow: inset 1em 1em var(--form-control-accent);
+        box-shadow: inset 1em 1em var(--control-accent);
         background-color: CanvasText;
     }
 
@@ -1015,7 +1015,7 @@
         color: currentColor;
         inline-size: 1.15em;
         block-size: 1.15em;
-        border: var(--border-control);
+        border: var(--control-border);
         border-radius: var(--circle);
         display: grid;
         place-content: center;
@@ -1027,7 +1027,7 @@
         block-size: 0.65em;
         border-radius: var(--circle);
         transform: scale(0);
-        box-shadow: inset 1em 1em var(--form-control-accent);
+        box-shadow: inset 1em 1em var(--control-accent);
         background-color: CanvasText;
     }
 
@@ -1042,8 +1042,8 @@
     }
 
     input:is([type=radio], [type=checkbox]):disabled {
-        --form-control-accent: var(--form-control-disabled);
-        color: var(--form-control-disabled);
+        --control-accent: var(--control-disabled);
+        color: var(--control-disabled);
         cursor: not-allowed;
     }
 
@@ -1157,8 +1157,8 @@
     }
 
     input[type=range]::-webkit-slider-runnable-track {
-        background-color: var(--border-input-color);
-        border: var(--border-input);
+        background-color: var(--input-color);
+        border: var(--input-border);
         border-radius: var(--radius);
         block-size: var(--space-20);
     }
@@ -1190,8 +1190,8 @@
     }
 
     input[type=range]::-moz-range-track {
-        background-color: var(--border-input-color);
-        border: var(--border-input);
+        background-color: var(--input-color);
+        border: var(--input-border);
         border-radius: var(--radius);
         block-size: var(--space-20);
     }
@@ -1268,18 +1268,18 @@
         gap: var(--space-10);
         padding: var(--space-10) var(--space-20);
         background: var(--surface);
-        border: var(--border-input);
+        border: var(--input-border);
         border-radius: var(--radius);
         font-size: var(--font-size-small);
     }
 
     .chip:hover {
         background: var(--surface-hover);
-        border-color: var(--border-input-color);
+        border-color: var(--input-color);
     }
 
     .chip:has(.chip-remove:hover) {
-        background: var(--surface-hover-subtle);
+        background: var(--surface-tint);
         border-color: var(--border-color);
         border-color: var(--error);
     }
@@ -1433,7 +1433,7 @@
         align-items: center;
         gap: var(--space-25);
         padding: var(--space-55) var(--space-45);
-        border: var(--border-width) dashed var(--border-input-color);
+        border: var(--border-width) dashed var(--input-color);
         border-radius: var(--radius);
         background-color: var(--surface);
         cursor: pointer;
@@ -1444,7 +1444,7 @@
 
     .file-upload:hover,
     .file-upload.drag-over {
-        background-color: var(--surface-hover-subtle);
+        background-color: var(--surface-tint);
         border-color: var(--brand-text);
     }
 
@@ -1475,7 +1475,7 @@
     /* -- signature ----------------------- */
     .signature-wrap {
         position: relative;
-        border: var(--border-input);
+        border: var(--input-border);
         border-radius: var(--radius);
         background-color: var(--surface);
         overflow: hidden;

@@ -24,14 +24,14 @@ A mobile-first forms system prototype for a psychiatric patient intake flow. Dem
 ### CSS Layers
 
 ```
-@layer config, native, layouts, components, keyframes, utils
+@layer config, native, layouts, components, motion, utils
 ```
 
 - **config** — design tokens in two sub-layers: `tokens-primitive` (neutral grayscale `---00`–`---100` via [neuitral.timpish.com](https://neuitral.timpish.com), brand/accent/error colors, typography, fluid space, shape, motion — all hex/OKLCH) and `tokens-semantic` (`light-dark()` aliases organized into surfaces, text, functional, borders, controls, fluid typography, shapes, borders, focus, motion)
 - **native** — base HTML element styles
 - **layouts** — `cover`, `stack-x`, `stack-y`, `split-x`
 - **components** — all UI components
-- **keyframes** — `fade-in` animation
+- **motion** — `@view-transition` (cross-document, wrapped in `prefers-reduced-motion`) and `fade-in` keyframe animation
 - **utils** — one-off overrides
 
 `light-dark()` is used exclusively at the semantic layer — never on primitives. All dark mode support lives in one place with no duplicate rules.

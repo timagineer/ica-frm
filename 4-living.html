@@ -42,38 +42,40 @@
 
     <main>
         <form class="stack-y" style="--gap:var(--space-50)">
-            <div class="stack-y" style="--gap:var(--space-15-25)" role="group" aria-labelledby="q-childhood" aria-required="true">
+            <div class="field" role="group" aria-labelledby="q-childhood" aria-required="true">
                 <h2 id="q-childhood" class="required">Describe your childhood family experience</h2>
                 <p class="hint">Select all that apply.</p>
-                <div class="box split-x">
-                    <label for="ch-1">Neglected</label>
-                    <input id="ch-1" name="childhood" type="checkbox" value="neglected" />
+                <div class="stack-y" style="--gap:var(--space-15-25)">
+                    <div class="box split-x">
+                        <label for="ch-1">Neglected</label>
+                        <input id="ch-1" name="childhood" type="checkbox" value="neglected" />
+                    </div>
+                    <div class="box split-x">
+                        <label for="ch-2">Saw physical abuse towards others</label>
+                        <input id="ch-2" name="childhood" type="checkbox" value="saw-physical" />
+                    </div>
+                    <div class="box split-x">
+                        <label for="ch-3">Saw verbal abuse towards others</label>
+                        <input id="ch-3" name="childhood" type="checkbox" value="saw-verbal" />
+                    </div>
+                    <div class="box split-x">
+                        <label for="ch-4">Saw sexual abuse towards others</label>
+                        <input id="ch-4" name="childhood" type="checkbox" value="saw-sexual" />
+                    </div>
+                    <div class="box split-x">
+                        <label for="ch-5">Experienced physical abuse</label>
+                        <input id="ch-5" name="childhood" type="checkbox" value="exp-physical" />
+                    </div>
+                    <div class="box split-x">
+                        <label for="ch-6">Experienced verbal abuse</label>
+                        <input id="ch-6" name="childhood" type="checkbox" value="exp-verbal" />
+                    </div>
+                    <div class="box split-x">
+                        <label for="ch-7">Experienced sexual abuse</label>
+                        <input id="ch-7" name="childhood" type="checkbox" value="exp-sexual" />
+                    </div>
+                    <div class="error-message" hidden>Please select at least one option</div>
                 </div>
-                <div class="box split-x">
-                    <label for="ch-2">Saw physical abuse towards others</label>
-                    <input id="ch-2" name="childhood" type="checkbox" value="saw-physical" />
-                </div>
-                <div class="box split-x">
-                    <label for="ch-3">Saw verbal abuse towards others</label>
-                    <input id="ch-3" name="childhood" type="checkbox" value="saw-verbal" />
-                </div>
-                <div class="box split-x">
-                    <label for="ch-4">Saw sexual abuse towards others</label>
-                    <input id="ch-4" name="childhood" type="checkbox" value="saw-sexual" />
-                </div>
-                <div class="box split-x">
-                    <label for="ch-5">Experienced physical abuse</label>
-                    <input id="ch-5" name="childhood" type="checkbox" value="exp-physical" />
-                </div>
-                <div class="box split-x">
-                    <label for="ch-6">Experienced verbal abuse</label>
-                    <input id="ch-6" name="childhood" type="checkbox" value="exp-verbal" />
-                </div>
-                <div class="box split-x">
-                    <label for="ch-7">Experienced sexual abuse</label>
-                    <input id="ch-7" name="childhood" type="checkbox" value="exp-sexual" />
-                </div>
-                <div class="error-message" hidden>Please select at least one option</div>
             </div>
         </form>
     </main>

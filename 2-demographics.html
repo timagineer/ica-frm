@@ -49,15 +49,15 @@
                     <div id="first-name-error" class="error-message" hidden>First name is required</div>
                 </div>
 
-                <div class="field">
-                    <label for="preferred-name">Preferred name</label>
-                    <input id="preferred-name" name="preferredName" type="text" autocomplete="nickname">
-                </div>
-
                 <div class="field required">
                     <label for="last-name">Last name</label>
                     <input id="last-name" name="lastName" type="text" autocomplete="family-name" aria-required="true" aria-describedby="last-name-error">
                     <div id="last-name-error" class="error-message" hidden>Last name is required</div>
+                </div>
+
+                <div class="field">
+                    <label for="preferred-name">Preferred name</label>
+                    <input id="preferred-name" name="preferredName" type="text" autocomplete="nickname">
                 </div>
             </div>
 
@@ -76,8 +76,7 @@
 
                 <div class="field required">
                     <label for="phone">Phone number</label>
-                    <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="555-555-5555" aria-required="true" aria-describedby="phone-hint phone-error">
-                    <div id="phone-hint" class="hint">Enter a 10-digit number</div>
+                    <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="555-555-5555" aria-required="true" aria-describedby="phone-error">
                     <div id="phone-error" class="error-message" hidden>Please enter a valid phone number</div>
                 </div>
             </div>

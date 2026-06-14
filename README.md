@@ -24,14 +24,14 @@ A mobile-first forms system prototype for a psychiatric patient intake flow. Dem
 ### CSS Layers
 
 ```
-@layer config, native, layouts, components, motion, utils
+@layer config, native, layouts, components, keyframes, utils
 ```
 
-- **config** — design tokens (primitives → semantic → reset). Two sub-layers: `tokens-primitive` (color palettes, spacing, typography, etc.) and `tokens-semantic` (named aliases using `light-dark()` for color)
+- **config** — design tokens in two sub-layers: `tokens-primitive` (neutral grayscale `---00`–`---100` via [neuitral.timpish.com](https://neuitral.timpish.com), brand/accent/error colors, typography, fluid space, shape, motion — all hex/OKLCH) and `tokens-semantic` (`light-dark()` aliases organized into surfaces, text, functional, borders, controls, fluid typography, shapes, borders, focus, motion)
 - **native** — base HTML element styles
 - **layouts** — `cover`, `stack-x`, `stack-y`, `split-x`
 - **components** — all UI components
-- **motion** — cross-document `@view-transition` and `fade-in` keyframes
+- **keyframes** — `fade-in` animation
 - **utils** — one-off overrides
 
 `light-dark()` is used exclusively at the semantic layer — never on primitives. All dark mode support lives in one place with no duplicate rules.
@@ -62,25 +62,25 @@ Cross-document transitions handled entirely by the browser — no JS required.
 
 ## Pages & Input Patterns
 
-| Page                                 | Pattern(s)                                                                              |
-|--------------------------------------|-----------------------------------------------------------------------------------------|
-| `index.html` — Dashboard             | Progress bar web component, auto-advance toggle switch                                  |
-| `1-start.html` — Intro               | No inputs — context and time estimate                                                   |
-| `2-demographics.html` — Demographics | Text, preferred name (mirrors first), date, email, tel, select, ZIP — 3-col grid layout |
-| `3-employment.html` — Employment     | Radio group, auto-advance                                                               |
-| `4-living.html` — Childhood          | Checkbox group                                                                          |
-| `5-family.html` — Family Members     | Radio table (8 rows × 4 options, responsive)                                            |
-| `6-history.html` — History           | Branching/conditional fields, dynamic `aria-required`                                   |
-| `7-medications.html` — Medications   | Range slider, multi-select combobox, single-select combobox                             |
-| `8-notes-upload.html` — Notes        | Textarea, drag-and-drop file upload with chip list                                      |
-| `9-signature.html` — Signature       | Canvas signature pad (dark mode ink), typed name, consent checkbox                      |
-| `10-confirm.html` — Confirmation     | Sets `sessionStorage('socialHistoryComplete')`, returns to dashboard                    |
+| Page                                 | Pattern(s)                                                                                                                                                          |
+|--------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `index.html` — Dashboard             | Progress bar web component, auto-advance toggle switch                                                                                                              |
+| `1-start.html` — Intro               | No inputs — context and time estimate                                                                                                                               |
+| `2-demographics.html` — Demographics | Text, preferred name (mirrors first name, pre-seeded), date, email, tel, select, ZIP — 3-col grid layout, fields pre-filled with demo patient data (Pamela Patient) |
+| `3-employment.html` — Employment     | Radio group, auto-advance                                                                                                                                           |
+| `4-living.html` — Childhood          | Checkbox group                                                                                                                                                      |
+| `5-family.html` — Family Members     | Radio table (8 rows × 4 options, responsive)                                                                                                                        |
+| `6-history.html` — History           | Branching/conditional fields, dynamic `aria-required`                                                                                                               |
+| `7-medications.html` — Medications   | Range slider, multi-select combobox, single-select combobox                                                                                                         |
+| `8-notes-upload.html` — Notes        | Textarea, drag-and-drop file upload with chip list                                                                                                                  |
+| `9-signature.html` — Signature       | Canvas signature pad (dark mode ink), typed name, consent checkbox                                                                                                  |
+| `10-confirm.html` — Confirmation     | Sets `sessionStorage('socialHistoryComplete')`, returns to dashboard                                                                                                |
 
 ---
 
 ## Design Tokens
 
-Primitives are a perceptual 99-step grayscale prototyping palette (`---00`–`---100`) via [neuitral.timpish.com](https://neuitral.timpish.com) plus named brand, accent, and error tokens — all hex. Semantic tokens use `light-dark()` exclusively. The brand scale splits into `--brand-text` (text/focus/ghost) and `--brand-surface` (primary button) to satisfy WCAG 1.4.3 in both modes simultaneously.
+Primitives are a perceptual 99-step grayscale (`---00`–`---100`) via [neuitral.timpish.com](https://neuitral.timpish.com) plus named brand, accent, and error tokens — all hex/OKLCH. Fluid space tokens (`--space-XX-YY` clamps) live in primitives alongside static steps. Semantic tokens use `light-dark()` exclusively, organized into: surfaces, text, functional (brand/accent/error), borders, and controls. The brand scale splits into `--brand-text` (text/focus/ghost) and `--brand-surface` (primary button bg) to satisfy WCAG 1.4.3 in both modes simultaneously.
 
 
 ### WCAG 2.1 AA

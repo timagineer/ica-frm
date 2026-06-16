@@ -1,6 +1,3 @@
-/*
-- strip grays/ rename? (bkup)
-*/
 @layer config, native, layouts, components, motion, utils;
 
 @layer config {

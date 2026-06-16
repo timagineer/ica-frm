@@ -27,7 +27,7 @@ A mobile-first forms system prototype for a psychiatric patient intake flow. Dem
 @layer config, native, layouts, components, motion, utils
 ```
 
-- **config** — design tokens in two sub-layers: `tokens-primitive` (neutral grayscale `---00`–`---100` via [neuitral.timpish.com](https://neuitral.timpish.com), brand/accent/error colors, typography, fluid space, shape, motion — all hex/OKLCH) and `tokens-semantic` (`light-dark()` aliases organized into surfaces, text, functional, borders, controls, fluid typography, shapes, borders, focus, motion)
+- **config** — design tokens in two sub-layers: `tokens-primitive` (24-step slate grayscale (`--slate-05`–`--slate-100`) via [neuitral.timpish.com](https://neuitral.timpish.com), brand/accent/error colors, typography, fluid space, shape, motion — all hex/OKLCH) and `tokens-semantic` (`light-dark()` aliases organized into surfaces, text, functional, borders, controls, fluid typography, shapes, focus, motion)
 - **native** — base HTML element styles
 - **layouts** — `cover`, `stack-x`, `stack-y`, `split-x`
 - **components** — all UI components
@@ -80,7 +80,7 @@ Cross-document transitions handled entirely by the browser — no JS required.
 
 ## Design Tokens
 
-Primitives are a perceptual 99-step grayscale (`---00`–`---100`) via [neuitral.timpish.com](https://neuitral.timpish.com) plus named brand, accent, and error tokens — all hex/OKLCH. Fluid space tokens (`--space-XX-YY` clamps) live in primitives alongside static steps. Semantic tokens use `light-dark()` exclusively, organized into: surfaces, text, functional (brand/accent/error), borders, and controls. The brand scale splits into `--brand-text` (text/focus/ghost) and `--brand-surface` (primary button bg) to satisfy WCAG 1.4.3 in both modes simultaneously.
+Primitives are a 24-step slate grayscale (`--slate-05`–`--slate-100`, trimmed from the full 101-step scale to used values only) via [neuitral.timpish.com](https://neuitral.timpish.com), plus named brand, accent, and error OKLCH tokens. Fluid space tokens (`--space-XX-YY` clamps) live in primitives alongside static steps. Semantic tokens use `light-dark()` exclusively, organized into: surfaces, text, functional (brand/accent/error), borders, and controls. The brand scale splits into `--brand-text` (text/focus/ghost) and `--brand-surface` (primary button bg) to satisfy WCAG 1.4.3 in both modes simultaneously. The error scale splits into `--error` and `--error-shade` (darker active state for chip bg/border, passes 3:1 against surface in both modes).
 
 
 ### WCAG 2.1 AA
@@ -88,3 +88,4 @@ Primitives are a perceptual 99-step grayscale (`---00`–`---100`) via [neuitral
 - **1.4.11** — input borders, control borders, progress track all pass 3:1
 - Required `*` markers use `font-weight: regular`
 - Hover/active state contrast accepted as exempt per WCAG
+- Chip destructive active state (`--error-shade`) passes 3:1 non-text against surface in both modes

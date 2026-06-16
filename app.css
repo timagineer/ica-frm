@@ -103,6 +103,7 @@
             --space-05-15: clamp(var(--space-05), 0.0491rem + 0.2232vw, var(--space-15));
             --space-15-25: clamp(var(--space-15), 0.1786rem + 0.3571vw, var(--space-25));
             --space-30-40: clamp(var(--space-30), 0.5179rem + 0.5357vw, var(--space-40));
+            --space-30-55: clamp(var(--space-30), 0.375rem + 1.25vw, var(--space-55));
             --space-30-60: clamp(var(--space-30), 0.2321rem + 1.9643vw, var(--space-60));
             --space-35-40: clamp(var(--space-35), 0.6786rem + 0.3571vw, var(--space-40));
             --space-35-45: clamp(var(--space-35), 0.6429rem + 0.5357vw, var(--space-45));
@@ -1473,17 +1474,25 @@
 
 @layer utils {
 
-    /* -- layout debugger ----------------------------- */
-    /* * {
-        outline: 0.5px dashed deeppink !important;
-    } */
 
     .u-mbs30 {
         margin-block-start: var(--space-30) !important;
+    }
+
+    .u-mbs3055 {
+        margin-block-start: var(--space-30-55) !important;
+    }
+
+    .u-mbs3060 {
+        margin-block-start: var(--space-30-60) !important;
     }
 
     .u-mbs3040 {
         margin-block-start: var(--space-30-40) !important;
     }
 
+    /* -- layout debugger ----------------------------- */
+    /* * {
+        outline: 0.5px dashed deeppink !important;
+    } */
 }

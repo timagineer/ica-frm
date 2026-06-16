@@ -26,108 +26,31 @@
             --green-1d: oklch(56.178% 0.1659 135.639);
             --red-1: oklch(57.66% 0.21353 21.464);
             --red-1d: oklch(61.965% 0.2142 21.254);
-            /* --red-2d: hsl(354, 82%, 27%); */
-            ---00: #000000;
-            ---01: #020203;
-            ---02: #040506;
-            ---03: #070709;
-            ---04: #090a0b;
-            ---05: #0b0c0e;
-            ---06: #0d0f11;
-            ---07: #101114;
-            ---08: #121417;
-            ---09: #14161a;
-            ---10: #16191d;
-            ---11: #191b1f;
-            ---12: #1b1e22;
-            ---13: #1d2025;
-            ---14: #1f2328;
-            ---15: #22252b;
-            ---16: #24282e;
-            ---17: #262a31;
-            ---18: #282d33;
-            ---19: #2b2f36;
-            ---20: #2d3239;
-            ---21: #2f343c;
-            ---22: #31373f;
-            ---23: #343942;
-            ---24: #363c45;
-            ---25: #383e47;
-            ---26: #3a414a;
-            ---27: #3d434d;
-            ---28: #3f4650;
-            ---29: #414853;
-            ---30: #434b56;
-            ---31: #464d59;
-            ---32: #48505b;
-            ---33: #4a525e;
-            ---34: #4c5561;
-            ---35: #4f5764;
-            ---36: #515a67;
-            ---37: #535c6a;
-            ---38: #555f6d;
-            ---39: #58616f;
-            ---40: #5a6472;
-            ---41: #5c6675;
-            ---42: #5e6978;
-            ---43: #606b7b;
-            ---44: #636e7e;
-            ---45: #657081;
-            ---46: #677283;
-            ---47: #697586;
-            ---48: #6c7789;
-            ---49: #6e7a8c;
-            ---50: #707c8f;
-            ---51: #737f91;
-            ---52: #768293;
-            ---53: #798496;
-            ---54: #7c8798;
-            ---55: #7e899a;
-            ---56: #818c9c;
-            ---57: #848f9f;
-            ---58: #8791a1;
-            ---59: #8a94a3;
-            ---60: #8d97a5;
-            ---61: #9099a7;
-            ---62: #929caa;
-            ---63: #959eac;
-            ---64: #98a1ae;
-            ---65: #9ba4b0;
-            ---66: #9ea6b3;
-            ---67: #a1a9b5;
-            ---68: #a4abb7;
-            ---69: #a6aeb9;
-            ---70: #a9b1bc;
-            ---71: #acb3be;
-            ---72: #afb6c0;
-            ---73: #b2b8c2;
-            ---74: #b5bbc5;
-            ---75: #b8bec7;
-            ---76: #bac0c9;
-            ---77: #bdc3cb;
-            ---78: #c0c6ce;
-            ---79: #c3c8d0;
-            ---80: #c6cbd2;
-            ---81: #c9cdd4;
-            ---82: #ccd0d7;
-            ---83: #ced3d9;
-            ---84: #d1d5db;
-            ---85: #d4d8dd;
-            ---86: #d7dae0;
-            ---87: #dadde2;
-            ---88: #dde0e4;
-            ---89: #e0e2e6;
-            ---90: #e2e5e9;
-            ---91: #e5e7eb;
-            ---92: #e8eaed;
-            ---93: #ebedef;
-            ---94: #eeeff2;
-            ---95: #f1f2f4;
-            ---96: #f4f5f6;
-            ---97: #f6f7f8;
-            ---98: #f9fafb;
-            ---99: #fcfcfd;
-            ---100: #ffffff;
+            --red-2: oklch(49.325% 0.19967 24.322);
+            --red-2d: oklch(54.881% 0.2139 21.382);
+            --slate-05: #0b0c0e;
+            --slate-06: #0d0f11;
+            --slate-08: #121417;
+            --slate-12: #1b1e22;
+            --slate-14: #1f2328;
+            --slate-20: #2d3239;
+            --slate-23: #343942;
+            --slate-24: #363c45;
+            --slate-28: #3f4650;
+            --slate-40: #5a6472;
+            --slate-44: #636e7e;
+            --slate-51: #737f91;
+            --slate-55: #7e899a;
+            --slate-56: #818c9c;
+            --slate-58: #8791a1;
+            --slate-76: #bac0c9;
+            --slate-84: #d1d5db;
+            --slate-88: #dde0e4;
+            --slate-92: #e8eaed;
+            --slate-96: #f4f5f6;
+            --slate-97: #f6f7f8;
+            --slate-98: #f9fafb;
+            --slate-100: #ffffff;
 
             /* Typography */
             --font-system-ui: system-ui, sans-serif;
@@ -204,39 +127,40 @@
         :where(:host, :root) {
 
             /* Color: Surfaces */
-            --canvas: light-dark(var(---98), var(---05));
-            --surface: light-dark(var(---100), var(---06));
-            --surface-hover: light-dark(var(---92), var(---12));
-            --surface-tint: light-dark(var(---97), var(---08));
-            --surface-active: light-dark(var(---88), var(---14));
+            --canvas: light-dark(var(--slate-98), var(--slate-05));
+            --surface: light-dark(var(--slate-100), var(--slate-06));
+            --surface-hover: light-dark(var(--slate-92), var(--slate-12));
+            --surface-tint: light-dark(var(--slate-97), var(--slate-08));
+            --surface-active: light-dark(var(--slate-88), var(--slate-14));
 
             /* Color: Text */
-            --text-heading: light-dark(var(---24), var(---92));
-            --text-body: light-dark(var(---20), var(---88));
-            --text-muted: light-dark(var(---40), var(---58));
-            --text-ghost: light-dark(var(---51), var(---44));
-            --text-on-brand: var(---100);
+            --text-heading: light-dark(var(--slate-24), var(--slate-92));
+            --text-body: light-dark(var(--slate-20), var(--slate-88));
+            --text-muted: light-dark(var(--slate-40), var(--slate-58));
+            --text-ghost: light-dark(var(--slate-51), var(--slate-44));
+            --text-on-brand: var(--slate-100);
 
             /* Color: Functional */
-            --accent: light-dark(var(--green-1), var(--green-1d));
             --brand-text: light-dark(var(--blue-3), var(--blue-4d));
             --brand-surface: light-dark(var(--blue-3), var(--blue-3d));
             --brand-hover: light-dark(var(--blue-2), var(--blue-2d));
             --brand-active: light-dark(var(--blue-1), var(--blue-1d));
+            --accent: light-dark(var(--green-1), var(--green-1d));
             --error: light-dark(var(--red-1), var(--red-1d));
+            --error-shade: light-dark(var(--red-2), var(--red-2d));
 
             /* Color: Borders */
-            --border-color: light-dark(var(---76), var(---20));
-            --input-color: light-dark(var(---55), var(---40));
-            --control-color: light-dark(var(---56), var(---44));
+            --border-color: light-dark(var(--slate-76), var(--slate-20));
+            --input-color: light-dark(var(--slate-55), var(--slate-40));
+            --control-color: light-dark(var(--slate-56), var(--slate-44));
 
             /* Color: Controls */
             --control-accent: var(--brand-surface);
-            --control-disabled: light-dark(var(---58), var(---40));
+            --control-disabled: light-dark(var(--slate-58), var(--slate-40));
             --progress-fill: light-dark(var(--blue-4), var(--blue-4d));
-            --progress-track: light-dark(var(---84), var(---23));
-            --switch-track: light-dark(var(---56), var(---44));
-            --surface-nav-active: light-dark(var(---96), var(---08));
+            --progress-track: light-dark(var(--slate-84), var(--slate-23));
+            --switch-track: light-dark(var(--slate-56), var(--slate-44));
+            --surface-nav-active: light-dark(var(--slate-96), var(--slate-08));
 
             /* Fluid Typography */
             --font-size-small: clamp(var(--font-size-00), 0.7026rem + 0.2371vw, var(--font-size-05));
@@ -552,7 +476,7 @@
 
     .user-menu svg {
         fill: none;
-        color: light-dark(var(---28), var(---70));
+        color: light-dark(var(--slate-28), var(--slate-70));
         translate: 0 1px;
     }
 
@@ -612,7 +536,7 @@
 
     /* -- logo ---------------------------- */
     .logo {
-        color: light-dark(var(---44), var(---70));
+        color: light-dark(var(--slate-44), var(--slate-70));
         font-weight: var(--semibold);
         letter-spacing: var(--tracking-00);
         max-inline-size: 18rem;
@@ -1285,8 +1209,9 @@
     }
 
     .chip:has(.chip-remove:active) {
-        background: var(--error);
-        color: var(---100);
+        background: var(--error-shade);
+        border-color: var(--error-shade);
+        color: var(--slate-100);
     }
 
     .chip-remove {
@@ -1321,7 +1246,7 @@
 
     .chip-remove:active {
         transform: scale(0.97);
-        color: var(---100);
+        color: var(--slate-100);
     }
 
     /* -- radio table --------------------- */

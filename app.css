@@ -567,7 +567,7 @@
 
     .breadcrumbs a+a::before,
     .breadcrumbs a+span::before {
-        /* content: "Ã‚Â»"; */
+        /* content: "Ãƒâ€šÃ‚Â»"; */
         content: "\00BB";
         margin-inline: var(--space-20);
         color: var(--text-muted);

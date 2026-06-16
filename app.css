@@ -153,6 +153,7 @@
 
             /* Color: Borders */
             --border-color: light-dark(var(--slate-76), var(--slate-20));
+            --border-nav-hover: light-dark(var(--slate-70), var(--slate-40));
             --input-color: light-dark(var(--slate-55), var(--slate-40));
             --control-color: light-dark(var(--slate-56), var(--slate-44));
 
@@ -441,7 +442,7 @@
     .header-nav a:hover {
         color: var(--text-body);
         background-color: var(--surface-hover);
-        box-shadow: inset 0 -1.5px 0 var(--border-color);
+        box-shadow: inset 0 -1.5px 0 var(--border-nav-hover);
     }
 
     .header-nav a.active {

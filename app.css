@@ -1,3 +1,4 @@
+/* stack-y across pps */
 @layer config, native, layouts, components, motion, utils;
 
 @layer config {
@@ -25,30 +26,30 @@
             --red-1d: oklch(61.965% 0.2142 21.254);
             --red-2: oklch(49.325% 0.19967 24.322);
             --red-2d: oklch(54.881% 0.2139 21.382);
-            --slate-05: #0b0c0e;
-            --slate-06: #0d0f11;
-            --slate-08: #121417;
-            --slate-12: #1b1e22;
-            --slate-14: #1f2328;
-            --slate-20: #2d3239;
-            --slate-23: #343942;
-            --slate-24: #363c45;
-            --slate-28: #3f4650;
-            --slate-40: #5a6472;
-            --slate-44: #636e7e;
-            --slate-51: #737f91;
-            --slate-55: #7e899a;
-            --slate-56: #818c9c;
-            --slate-58: #8791a1;
-            --slate-70: #a9b1bc;
-            --slate-76: #bac0c9;
-            --slate-84: #d1d5db;
-            --slate-88: #dde0e4;
-            --slate-92: #e8eaed;
-            --slate-96: #f4f5f6;
-            --slate-97: #f6f7f8;
-            --slate-98: #f9fafb;
-            --slate-100: #ffffff;
+            --slate-05: oklch(15.41% 0.0046 264.465);
+            --slate-06: oklch(16.706% 0.00533 248.233);
+            --slate-08: oklch(19.039% 0.00688 258.417);
+            --slate-12: oklch(23.361% 0.00896 255.653);
+            --slate-14: oklch(25.421% 0.01115 254.089);
+            --slate-20: oklch(31.514% 0.01438 256.824);
+            --slate-23: oklch(34.343% 0.01723 262.294);
+            --slate-24: oklch(35.412% 0.01768 258.409);
+            --slate-28: oklch(39.165% 0.01936 257.297);
+            --slate-40: oklch(49.977% 0.02562 256.83);
+            --slate-44: oklch(53.474% 0.02855 257.711);
+            --slate-51: oklch(59.293% 0.03109 258.407);
+            --slate-55: oklch(62.691% 0.02877 259.08);
+            --slate-56: oklch(63.654% 0.02732 257.711);
+            --slate-58: oklch(65.388% 0.0266 259.852);
+            --slate-70: oklch(75.749% 0.01822 256.377);
+            --slate-76: oklch(80.582% 0.0144 258.439);
+            --slate-84: oklch(87.168% 0.00944 258.479);
+            --slate-88: oklch(90.555% 0.00644 255.732);
+            --slate-92: oklch(93.637% 0.00469 258.621);
+            --slate-96: oklch(96.967% 0.00181 249.224);
+            --slate-97: oklch(97.566% 0.00181 249.234);
+            --slate-98: oklch(98.463% 0.00181 249.248);
+            --slate-100: oklch(100% 0.00011 271.152);
 
             /* Typography */
             --font-system-ui: system-ui, sans-serif;

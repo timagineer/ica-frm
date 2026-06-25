@@ -24,7 +24,9 @@
         </nav>
         <button class="user-menu" aria-expanded="false">
             Maximillion
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m6 9 6 6 6-6" />
+            </svg>
         </button>
         <button id="main-menu" class="with-icon" onclick="menu()" aria-expanded="false" aria-label="Open menu">
             <svg class="icon" viewBox="0 0 10 10" stroke="currentColor" stroke-width="1.3">
@@ -89,9 +91,16 @@
                 </div>
 
                 <div class="field required">
-                    <label for="state">State</label>
-                    <select id="state" name="state" aria-required="true" aria-describedby="state-error">
-                        <option value="">Select…</option>
+                    <label for="city">City</label>
+                    <input id="city" name="city" type="text" autocomplete="address-level2" aria-required="true" aria-describedby="city-error">
+                    <div id="city-error" class="error-message" hidden>City is required</div>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="field required">
+                        <label for="state">State</label>
+                        <select id="state" name="state" aria-required="true" aria-describedby="state-error">
+                            <option value="">Select…</option>
                             <option>Alabama</option>
                             <option>Alaska</option>
                             <option>Arizona</option>
@@ -181,6 +190,7 @@
                 saveField('email', 'pam.patient@email.com');
                 saveField('phone', '555-382-9147');
                 saveField('address', '742 Evergreen Terrace');
+                saveField('city', 'Baltimore');
                 saveField('state', 'Maryland');
                 restoreForm();
                 updateProgress();
